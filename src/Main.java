@@ -28,6 +28,6 @@ public class Main
 	public static void main(String[] args)
 	{
 		Hilbert h = new Hilbert();
-		h.GOL(8,"hilbertPrimes8.cells");
+		h.GOLGolly(10,"hilbertPrimes10.rle");
 	}
 }
