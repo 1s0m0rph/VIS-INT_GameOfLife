@@ -27,8 +27,18 @@ public class Main
 	
 	public static void main(String[] args)
 	{
-		Hilbert h = new Hilbert();
-		for(int i = 1; i < 10; i++)
-			h.GOLGolly(i,"hilbertPrimes" + i + ".rle");
+//		Hilbert h = new Hilbert();
+//		for(int i = 1; i < 10; i++)
+//			h.GOLGolly(i,"hilbertPrimes" + i + ".rle");
+		GOLGen gg = new GOLGen();
+		Ulam u = new Ulam();
+//		for(int[] c : trav)
+//			System.out.println("(" + c[0] + "," + c[1] + ")");
+		for(int a = 100; a <= 1200; a+=100)
+		{
+			System.out.println(a);
+			int[][] trav = u.getSpiral(a);
+			gg.GOLGolly(trav, "ulamprimes" + a + ".rle");
+		}
 	}
 }
