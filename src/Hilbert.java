@@ -34,7 +34,7 @@ public class Hilbert
 		return S;
 	}
 	
-	String getTurtleHilbert(int order)
+	private String getTurtleHilbert(int order)
 	{
 		String A = "LBFRAFARFBL";
 		String B = "RAFLBFBLFAR";
@@ -124,7 +124,7 @@ public class Hilbert
 		return c;
 	}
 	
-	String replaceStringIndex(String a, int idx, char with)
+	private String replaceStringIndex(String a, int idx, char with)
 	{
 		return a.substring(0,idx) + with + a.substring(idx+1);
 	}
@@ -172,7 +172,7 @@ public class Hilbert
 		pw.close();
 	}
 
-	String compressString(String s)
+	private String compressString(String s)
 	{
 		int currentCharCount = 1;
 		char currentChar = s.charAt(0);
@@ -183,7 +183,7 @@ public class Hilbert
 			{
 				if(currentCharCount != 1)
 				{
-					ret.append(currentCharCount + Character.toString(currentChar));
+					ret.append(currentCharCount).append(Character.toString(currentChar));
 				}
 				else
 				{

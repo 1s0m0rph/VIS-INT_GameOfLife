@@ -1,7 +1,7 @@
 public class Main
 {
 
-	static boolean isPrime(long n)
+	private static boolean isPrime(long n)
 	{
 		long lim = (long)Math.ceil(Math.sqrt(n));
 		for(long c = 2; c <= lim; c++)
@@ -28,6 +28,7 @@ public class Main
 	public static void main(String[] args)
 	{
 		Hilbert h = new Hilbert();
-		h.GOLGolly(10,"hilbertPrimes10.rle");
+		for(int i = 1; i < 10; i++)
+			h.GOLGolly(i,"hilbertPrimes" + i + ".rle");
 	}
 }
