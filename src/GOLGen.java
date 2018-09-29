@@ -99,7 +99,7 @@ public class GOLGen
 		return ret.toString();
 	}
 	
-	void GOLGolly(int[][] traversal, String fileName)
+	void GOLGolly(int[][] traversal, String fileName, int bias)
 	{
 		//n is dimension
 		int lim = traversal.length;
@@ -117,7 +117,7 @@ public class GOLGen
 		
 		for(int d = 0; d < lim; d++)
 		{
-			if(isPrime(d+1) && d != 0)
+			if(isPrime(d+bias) && (d + bias) != 0 && (d + bias) != 1)
 			{
 				rep[traversal[d][1]] = replaceStringIndex(rep[traversal[d][1]],traversal[d][0],'o');
 			}

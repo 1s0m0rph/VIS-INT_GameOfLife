@@ -32,13 +32,17 @@ public class Main
 //			h.GOLGolly(i,"hilbertPrimes" + i + ".rle");
 		GOLGen gg = new GOLGen();
 		Ulam u = new Ulam();
+		Hilbert h = new Hilbert();
 //		for(int[] c : trav)
 //			System.out.println("(" + c[0] + "," + c[1] + ")");
-		for(int a = 100; a <= 1200; a+=100)
-		{
-			System.out.println(a);
-			int[][] trav = u.getSpiral(a);
-			gg.GOLGolly(trav, "ulamprimes" + a + ".rle");
-		}
+		int bias = 42;
+//		for(int a = 100; a <= 1200; a+=100)
+//		{
+//			System.out.println(a);
+////			int[][] trav = u.getSpiral(a);
+//			gg.GOLGolly(trav, "ulamprimes" + a + ".rle",);
+//		}
+		int[][] trav = h.hilbert2n(6);
+		gg.GOLGolly(trav,"hilbert6bias42.rle",bias);
 	}
 }
